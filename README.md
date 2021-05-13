@@ -265,11 +265,13 @@ MAILGUN_KEY=
 |3566002020360505|pm_card_jcb|
 |6200000000000005|pm_card_unionpay|
 
-
 ## Import the routes
 ```sh
 cd CMBPizzaAPI/postman/CMBPIZZA.postman_collection.json
 ```
+
+## Deployed
+https://cmbpizza-api.vercel.app
 
 ## License
 MIT
