@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "5f8a5003-e279-4e82-b84f-adb8b4406c23",
+		"name": "CMBPIZZA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "USERS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"Frank Yupanqui\",\r\n    \"email\":\"fyupanquiw@outlook.com\",\r\n    \"address\":\"Av. Forever lived\",\r\n    \"password\":\":)(:\",\r\n    \"tosAgreement\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "9wkwlq8gawgfpjuut7ql",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"fyupanquiw@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "uhi9nbotm3cslxjaq0rx",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/users?email=fyupanquia@outlook.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "fyupanquia@outlook.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "USERS",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "token",
+								"value": "uhi9nbotm3cslxjaq0rx",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"fyupanquia@outlook.com\",\r\n    \"address\":\"Jr. Trilce\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TOKENS",
+			"item": [
+				{
+					"name": "TOKENS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"fyupanquia@outlook.com\",\r\n    \"password\":\":)(:\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tokens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TOKENS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tokens?id=f060jnj1rbm9e5wksaoo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "f060jnj1rbm9e5wksaoo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TOKENS",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"f060jnj1rbm9e5wksaoo\",\r\n    \"extend\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/tokens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TOKENS",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/tokens?id=f060jnj1rbm9e5wksaoo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tokens"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "f060jnj1rbm9e5wksaoo"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MENU",
+			"item": [
+				{
+					"name": "GET TODAY MENU",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "0dv99emmtg03k6nszt41",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/menu?email=fyupanquia@outlook.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"menu"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "fyupanquia@outlook.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SHOPPINGCAR",
+			"item": [
+				{
+					"name": "CONFIRM",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "qxljp3u93kvy2d0zv9l8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cardId\":\"36227206271667\",\r\n    \"email\":\"fyupanquia@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/shoppingCar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shoppingCar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD NEW ORDER",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "0dv99emmtg03k6nszt41",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"Xvhw4tLU9vzA6GKt\",\r\n    \"quantity\":5,\r\n    \"email\":\"fyupanquia@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/shoppingCar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shoppingCar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
