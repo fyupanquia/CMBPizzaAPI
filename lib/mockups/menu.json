@@ -1,0 +1,26 @@
+[
+    {
+        "id":"Xvhw4tLU9vzA6GKt",
+        "name":"Classic XL",
+        "description":"Pizza to share with your 4 favorite flavors American, Pepperoni, Hawaiian and Supreme.",
+        "currency":"usd",
+        "price":13,
+        "url":"https://static.phdvasia.com/pe/img/singles/xl-clasica-desktop-thumbnail.jpg"
+    },
+    {
+        "id": "WNuRvSGba99U4Cqf",
+        "name": "SUPER SUPREME",
+        "description": "A perfect blend of American pepperoni, beef, pork, ham, Italian sausage, mushrooms, green peppers, red onion, green olives, and mozzarella cheese.",
+        "currency": "usd",
+        "price": 14,
+        "url": "https://static.phdvasia.com/pe/img/singles/super-suprema-desktop-thumbnail.jpg"
+    },
+    {
+        "id": "BxHGcyV2K9XtakRm",
+        "name": "MEAT LOVERS",
+        "description": "A feast of meat! American pepperoni, Italian sausage, beef, pork, ham slices and mozzarella cheese.",
+        "currency": "usd",
+        "price": 15,
+        "url": "https://static.phdvasia.com/pe/img/singles/super-suprema-desktop-thumbnail.jpg"
+    }
+]
