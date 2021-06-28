@@ -19,7 +19,6 @@ const unifiedServer = (req, res) => {
   const parsedUrl = new URL(
     `${req.httpProtocol}://localhost:${env.httpPort}${req.url}`
   );
-
   const path = parsedUrl.pathname;
   const queryStringObject = parsedUrl.searchParams.toString().length
     ? JSON.parse(
