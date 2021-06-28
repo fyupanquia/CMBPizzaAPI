@@ -1,0 +1,25 @@
+<h1>Welcome to CMBPizza</h1>
+<h2>The best peru-italian pizzas</h2>
+<div id="home-container" class="home-container">
+    <div class="blurb">Chase the pig around the house. Scratch me now! stop scratching me! stretch see brother cat receive
+      pets, attack out of
+      jealousy. The dog smells bad. I like fish trip owner up in kitchen i want food yet i like fish so love blinks and purr
+      purr purr purr yawn leave hair on owner's clothes and am in trouble, roll over, too cute for human to get mad and give
+      me attention or face the wrath of my claws. Meowwww sleep on dog bed, force dog to sleep on floor i could pee on this
+      if
+      i had the energy, love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat
+      the glittery gleaming yarn to him (the yarn is from a $125 sweater). Whatever taco cat backwards spells taco cat.
+    </div>
+    
+    <div class="ctaWrapper">
+      <a class="cta green" href="account/create">Get Started</a>
+      <a class="cta blue" href="session/create">Login</a>
+    </div>
+</div>
+
+<script>
+  app.getItems(function (statusCode, responsePayload) {
+    if (statusCode !== 200) return
+    app.showItems("home-container", responsePayload, true)
+  })  
+</script>

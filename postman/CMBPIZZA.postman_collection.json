@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"fullname\":\"Frank Yupanqui\",\r\n    \"email\":\"fyupanquiw@outlook.com\",\r\n    \"address\":\"Av. Forever lived\",\r\n    \"password\":\":)(:\",\r\n    \"tosAgreement\":true\r\n}",
+							"raw": "{\r\n    \"fullname\":\"Frank Yupanqui\",\r\n    \"email\":\"fyupanquia@outlook.com\",\r\n    \"address\":\"Av. Forever lived\",\r\n    \"password\":\":)(:\",\r\n    \"tosAgreement\":true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -23,13 +23,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/users",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/users",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"users"
 							]
 						}
@@ -43,7 +42,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "9wkwlq8gawgfpjuut7ql",
+								"value": "{{TOKEN}}",
 								"type": "text"
 							}
 						],
@@ -57,13 +56,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/users",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/users",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"users"
 							]
 						}
@@ -77,18 +75,17 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "uhi9nbotm3cslxjaq0rx",
+								"value": "{{TOKEN}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/users?email=fyupanquia@outlook.com",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/users?email=fyupanquia@outlook.com",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"users"
 							],
 							"query": [
@@ -108,7 +105,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "uhi9nbotm3cslxjaq0rx",
+								"value": "{{TOKEN}}",
 								"type": "text"
 							}
 						],
@@ -122,13 +119,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/users",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/users",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"users"
 							]
 						}
@@ -142,12 +138,24 @@
 			"item": [
 				{
 					"name": "TOKENS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var res = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"TOKEN\", res.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"fyupanquia@outlook.com\",\r\n    \"password\":\":)(:\"\r\n}",
+							"raw": "{\r\n    \"email\":\"fyupanquia@outlook.com\",\r\n    \"password\":\"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -155,13 +163,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/tokens",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/tokens",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"tokens"
 							]
 						}
@@ -174,19 +181,18 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/tokens?id=f060jnj1rbm9e5wksaoo",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/tokens?id={{TOKEN}}",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"tokens"
 							],
 							"query": [
 								{
 									"key": "id",
-									"value": "f060jnj1rbm9e5wksaoo"
+									"value": "{{TOKEN}}"
 								}
 							]
 						}
@@ -200,7 +206,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":\"f060jnj1rbm9e5wksaoo\",\r\n    \"extend\":true\r\n}",
+							"raw": "{\r\n    \"id\":\"{{TOKEN}}\",\r\n    \"extend\":true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -208,13 +214,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/tokens",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/tokens",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"tokens"
 							]
 						}
@@ -227,19 +232,18 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/tokens?id=f060jnj1rbm9e5wksaoo",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/tokens?id={{TOKEN}}",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"tokens"
 							],
 							"query": [
 								{
 									"key": "id",
-									"value": "f060jnj1rbm9e5wksaoo"
+									"value": "{{TOKEN}}"
 								}
 							]
 						}
@@ -252,24 +256,23 @@
 			"name": "MENU",
 			"item": [
 				{
-					"name": "GET TODAY MENU",
+					"name": "LIST DISHES",
 					"request": {
 						"method": "GET",
 						"header": [
 							{
 								"key": "token",
-								"value": "0dv99emmtg03k6nszt41",
+								"value": "{{TOKEN}}",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3000/menu?email=fyupanquia@outlook.com",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/menu?email=fyupanquia@outlook.com",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"menu"
 							],
 							"query": [
@@ -294,7 +297,7 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "qxljp3u93kvy2d0zv9l8",
+								"value": "{{TOKEN}}",
 								"type": "text"
 							}
 						],
@@ -308,13 +311,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/shoppingCar",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/shoppingCar",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"shoppingCar"
 							]
 						}
@@ -328,13 +330,13 @@
 						"header": [
 							{
 								"key": "token",
-								"value": "0dv99emmtg03k6nszt41",
+								"value": "{{TOKEN}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\":\"Xvhw4tLU9vzA6GKt\",\r\n    \"quantity\":5,\r\n    \"email\":\"fyupanquia@outlook.com\"\r\n}",
+							"raw": "{\r\n    \"id\":\"Xvhw4tLU9vzA6GKt\",\r\n    \"quantity\":1,\r\n    \"email\":\"fyupanquia@outlook.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -342,13 +344,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/shoppingCar",
-							"protocol": "http",
+							"raw": "{{HOST}}/api/shoppingCar",
 							"host": [
-								"localhost"
+								"{{HOST}}"
 							],
-							"port": "3000",
 							"path": [
+								"api",
 								"shoppingCar"
 							]
 						}

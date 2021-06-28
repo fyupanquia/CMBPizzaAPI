@@ -8,6 +8,7 @@
 - Shopping car
 - Pay with many cards
 - Email confirmation
+- Frontend App
 
 
 ## Installation
@@ -21,7 +22,7 @@ node index.js
 ```
 
 For app environments
-https://stripe.com/docs/api
+STRIPE https://stripe.com/docs/api
 ```sh
 STRIPE_KEY=
 ```
@@ -35,7 +36,7 @@ MAILGUN_KEY=
 #### 1) Create  new user
 | Method | Endpoint |
 | ------ | ------ |
-| POST | /users |
+| POST | api/users |
 #### 1.1) Body request example
 ```json
 {
@@ -53,7 +54,7 @@ MAILGUN_KEY=
 #### 2) Retrieve an user
 | Method | Endpoint |
 | ------ | ------ |
-| GET | /users |
+| GET | api/users |
 #### 2.1) Query params example
 ```json
 ?email=yupanqui@cmb.com
@@ -76,7 +77,7 @@ MAILGUN_KEY=
 #### 3) Edit an user
 | Method | Endpoint |
 | ------ | ------ |
-| PUT | /users |
+| PUT | api/users |
 #### 3.1) Body request example
 ```json
 {
@@ -97,7 +98,7 @@ MAILGUN_KEY=
 #### 4) Delete an user
 | Method | Endpoint |
 | ------ | ------ |
-| DELETE | /users |
+| DELETE | api/users |
 #### 4.1) Body request example
 ```json
 {
@@ -117,7 +118,7 @@ MAILGUN_KEY=
 #### 5) Create a token
 | Method | Endpoint |
 | ------ | ------ |
-| POST | /tokens |
+| POST | api/tokens |
 #### 5.1) Body request example
 ```json
 {
@@ -136,7 +137,7 @@ MAILGUN_KEY=
 #### 6) Retrieve a token
 | Method | Endpoint |
 | ------ | ------ |
-| GET | /tokens |
+| GET | api/tokens |
 #### 6.1) Query string example
 ```json
 ?id=opsggi3pc4x04ajonvpg
@@ -152,7 +153,7 @@ MAILGUN_KEY=
 #### 7) Extend a token
 | Method | Endpoint |
 | ------ | ------ |
-| PUT | /tokens |
+| PUT | api/tokens |
 #### 7.1) Body request example
 ```json
 {
@@ -167,7 +168,7 @@ MAILGUN_KEY=
 #### 8) Delete a token
 | Method | Endpoint |
 | ------ | ------ |
-| DELETE | /tokens |
+| DELETE | api/tokens |
 #### 8.1) Query string example
 ```json
 ?id=f060jnj1rbm9e5wksaoo
@@ -179,7 +180,7 @@ MAILGUN_KEY=
 #### 9) Retrieve the menu
 | Method | Endpoint |
 | ------ | ------ |
-| GET | /menu |
+| GET | api/menu |
 #### 9.1) Query string example
 ```json
 ?email=yupanqui@cmb.com
@@ -207,7 +208,7 @@ MAILGUN_KEY=
 #### 10) Add to the sopping car
 | Method | Endpoint |
 | ------ | ------ |
-| PATCH | /shoppingCar |
+| PATCH | api/shoppingCar |
 #### 10.1) Body request example
 ```json
 {
@@ -229,7 +230,7 @@ MAILGUN_KEY=
 #### 11) Confirm your order
 | Method | Endpoint |
 | ------ | ------ |
-| POST | /shoppingCar |
+| POST | api/shoppingCar |
 #### 11.1) Body request example
 ```json
 {

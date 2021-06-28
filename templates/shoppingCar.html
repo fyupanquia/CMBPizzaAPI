@@ -1,0 +1,31 @@
+<h1>CMBPizza</h1>
+<h2>Pay easily and safetly</h2>
+<div class="formWrapper">
+    <div id="home-container" class="home-container">
+        {shoppingCar.list}
+    </div>
+    <div class="cards-container">
+        <img src="public/amex.png"/>
+        <img src="public/diners.png" />
+        <img src="public/discover.png" />
+        <img src="public/jcb.png" />
+        <img src="public/mastercard.png" />
+        <img src="public/unionpay.png" />
+        <img src="public/visa.png" />
+    </div>
+    <form id="shoppingPay" action="/api/shoppingCar" method="POST">
+        <div class="formError"></div>
+        <div class="inputWrapper">
+            <div class="inputLabel">Card Number</div>
+            <input type="text" name="cardId" placeholder="4242424242424242" />
+            <input type="hidden" name="email" value="{user.email}"/>
+        </div>
+        <div class="inputWrapper ctaWrapper">
+            <button type="submit" class="cta blue">Confirm</button>
+        </div>
+    </form>
+    <h2>Fake card numbers</h2>
+    <div class="blurb">
+        {shoppingCar.cardIds}
+    </div>
+</div>
